@@ -11,7 +11,7 @@ document.querySelector('.date').innerHTML= ajd.toLocaleDateString("fr") ;
 
 function CalculPoids() { 
 
-  
+   
 let poidsAjd= Number (document.getElementById('poidsAjd').value);
 
 let tailleUser = Number (document.getElementById("tailleUser").value);
@@ -21,7 +21,7 @@ let resultatUser = document.getElementById("resultatUser");
 
 let resultImc  = poidsAjd / (tailleUser*tailleUser) .toFixed(2);
 
-
+document.getElementById("reponse").innerHTML=`Votre imc est de ${resultImc}`
 
   
 if(resultImc<=18.5){
@@ -53,5 +53,5 @@ else{
    document.getElementById("resultatUser").innerHTML = "Vous avez fais une erreur dans vos données.."
 }
 
-  document.getElementById("reponse").innerHTML=`Votre imc est de ${resultImc}`
+ 
 }
